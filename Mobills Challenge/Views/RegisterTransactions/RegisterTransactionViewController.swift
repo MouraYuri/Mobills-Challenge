@@ -8,8 +8,9 @@
 import UIKit
 
 class RegisterTransactionViewController: UIViewController {
-
     
+    let viewModel = RegisterTransactionViewModel()
+
     @IBOutlet weak var descriptionTextField: UITextField!
     
     @IBOutlet weak var valueTextField: UITextField!
@@ -27,15 +28,12 @@ class RegisterTransactionViewController: UIViewController {
         self.setupTextFieldsDelegates()
         setupDatePicker()
         
-        self.valueTextField.addToolbarToTextFields(doneAction: #selector(didTapDone), cancelAction: #selector(didTapCancel), barButtonTag: 0)
+        self.valueTextField.addToolbarToTextField(doneAction: #selector(didTapDone), cancelAction: #selector(didTapCancel), barButtonTag: 0)
     }
     
     func setupDatePicker(){
-        let screenWidth = UIScreen.main.bounds.width
-        let datePicker = UIDatePicker(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 400))
-        datePicker.datePickerMode = .date
-        self.dateTextField.inputView = datePicker
-        self.dateTextField.addToolbarToTextFields(doneAction: #selector(didTapDone), cancelAction: #selector(didTapCancel), barButtonTag: 1)
+        self.dateTextField.addInputViewAsDatePicker(datePickerMode: .date)
+        self.dateTextField.addToolbarToTextField(doneAction: #selector(didTapDone), cancelAction: #selector(didTapCancel), barButtonTag: 1)
     }
     
     
@@ -80,14 +78,14 @@ class RegisterTransactionViewController: UIViewController {
             return
         }
         
-        let newLabelString: String = getNewLabelString(segmentedControlCurrentStringValue)
+        let newLabelString: String = getLabelBelowSegmentedControlNewString(segmentedControlCurrentStringValue)
         
         DispatchQueue.main.async {
             self.labelBelowSegmentedControl.text = newLabelString
         }
     }
     
-    func getNewLabelString(_ segmentedControlCurrentStringValue: String) -> String {
+    func getLabelBelowSegmentedControlNewString(_ segmentedControlCurrentStringValue: String) -> String {
         switch segmentedControlCurrentStringValue {
         case "Receita":
             return "A receita foi recebida?"
@@ -99,6 +97,7 @@ class RegisterTransactionViewController: UIViewController {
     
     @IBAction func didTapFinalizeButton(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
+        self.viewModel.getUsers()
     }
     
 }

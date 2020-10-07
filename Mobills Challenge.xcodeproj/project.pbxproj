@@ -19,6 +19,11 @@
 		A0537442252D71D200991CE1 /* RegisterTransaction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0537441252D71D200991CE1 /* RegisterTransaction.storyboard */; };
 		A0537445252D71E700991CE1 /* RegisterTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0537444252D71E700991CE1 /* RegisterTransactionViewController.swift */; };
 		A053744A252D8F5C00991CE1 /* TextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0537449252D8F5C00991CE1 /* TextFieldExtensions.swift */; };
+		A059D29E252E043300F571C9 /* FirestoreServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A059D29D252E043300F571C9 /* FirestoreServices.swift */; };
+		A059D2A4252E05DE00F571C9 /* RegisterTransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A059D2A3252E05DE00F571C9 /* RegisterTransactionViewModel.swift */; };
+		A059D2A9252E0B1F00F571C9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A059D2A8252E0B1F00F571C9 /* User.swift */; };
+		A059D2AC252E115C00F571C9 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A059D2AB252E115C00F571C9 /* Transaction.swift */; };
+		A059D2AF252E180800F571C9 /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A059D2AE252E180800F571C9 /* MainScreenViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +41,11 @@
 		A0537441252D71D200991CE1 /* RegisterTransaction.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterTransaction.storyboard; sourceTree = "<group>"; };
 		A0537444252D71E700991CE1 /* RegisterTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTransactionViewController.swift; sourceTree = "<group>"; };
 		A0537449252D8F5C00991CE1 /* TextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtensions.swift; sourceTree = "<group>"; };
+		A059D29D252E043300F571C9 /* FirestoreServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreServices.swift; sourceTree = "<group>"; };
+		A059D2A3252E05DE00F571C9 /* RegisterTransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTransactionViewModel.swift; sourceTree = "<group>"; };
+		A059D2A8252E0B1F00F571C9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A059D2AB252E115C00F571C9 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		A059D2AE252E180800F571C9 /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
 		BE696E29A194B73F5E069118 /* Pods_Mobills_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mobills_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC19AE78A71EEA3E2E5AB94A /* Pods-Mobills Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobills Challenge.release.xcconfig"; path = "Target Support Files/Pods-Mobills Challenge/Pods-Mobills Challenge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +92,8 @@
 		A0537415252D311B00991CE1 /* Mobills Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				A059D2A7252E0B1300F571C9 /* Model */,
+				A059D2A1252E05AD00F571C9 /* ViewModels */,
 				A0537439252D402A00991CE1 /* Utils */,
 				A053742D252D318300991CE1 /* Views */,
 				A0537416252D311B00991CE1 /* AppDelegate.swift */,
@@ -115,6 +127,7 @@
 		A0537439252D402A00991CE1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A059D29C252E041900F571C9 /* FirebaseServices */,
 				A0537448252D8F4200991CE1 /* UIKit Extensions */,
 				A053743E252D406B00991CE1 /* TableViewCells */,
 			);
@@ -144,6 +157,32 @@
 				A0537449252D8F5C00991CE1 /* TextFieldExtensions.swift */,
 			);
 			path = "UIKit Extensions";
+			sourceTree = "<group>";
+		};
+		A059D29C252E041900F571C9 /* FirebaseServices */ = {
+			isa = PBXGroup;
+			children = (
+				A059D29D252E043300F571C9 /* FirestoreServices.swift */,
+			);
+			path = FirebaseServices;
+			sourceTree = "<group>";
+		};
+		A059D2A1252E05AD00F571C9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A059D2A3252E05DE00F571C9 /* RegisterTransactionViewModel.swift */,
+				A059D2AE252E180800F571C9 /* MainScreenViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A059D2A7252E0B1300F571C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A059D2A8252E0B1F00F571C9 /* User.swift */,
+				A059D2AB252E115C00F571C9 /* Transaction.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		D636785A593153DB114DAE17 /* Frameworks */ = {
@@ -271,10 +310,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0537445252D71E700991CE1 /* RegisterTransactionViewController.swift in Sources */,
+				A059D2AF252E180800F571C9 /* MainScreenViewModel.swift in Sources */,
 				A053744A252D8F5C00991CE1 /* TextFieldExtensions.swift in Sources */,
 				A0537417252D311B00991CE1 /* AppDelegate.swift in Sources */,
 				A0537419252D311B00991CE1 /* SceneDelegate.swift in Sources */,
+				A059D2AC252E115C00F571C9 /* Transaction.swift in Sources */,
+				A059D2A4252E05DE00F571C9 /* RegisterTransactionViewModel.swift in Sources */,
+				A059D2A9252E0B1F00F571C9 /* User.swift in Sources */,
 				A053743B252D404E00991CE1 /* TransactionsTableViewCell.swift in Sources */,
+				A059D29E252E043300F571C9 /* FirestoreServices.swift in Sources */,
 				A0537433252D31D200991CE1 /* MainScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

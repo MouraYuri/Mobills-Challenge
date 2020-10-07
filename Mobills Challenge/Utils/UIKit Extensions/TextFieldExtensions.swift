@@ -10,7 +10,7 @@ import UIKit
 
 extension UITextField {
     
-    func addToolbarToTextFields(doneAction: Selector, cancelAction: Selector, barButtonTag: Int){
+    func addToolbarToTextField(doneAction: Selector, cancelAction: Selector, barButtonTag: Int){
         let screenWidth = UIScreen.main.bounds.width
         let toolBar = UIToolbar(frame: CGRect(x: 0.0, y: 0.0, width: screenWidth, height: 44.0))
         let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
@@ -24,5 +24,12 @@ extension UITextField {
     
     func clearTextFieldContent(){
         self.text = nil
+    }
+    
+    func addInputViewAsDatePicker(datePickerMode: UIDatePicker.Mode){
+        let screenWidth = UIScreen.main.bounds.width
+        let datePicker = UIDatePicker(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 400))
+        datePicker.datePickerMode = .date
+        self.inputView = datePicker
     }
 }
