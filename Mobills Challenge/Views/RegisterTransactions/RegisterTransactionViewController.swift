@@ -27,7 +27,7 @@ class RegisterTransactionViewController: UIViewController {
         self.setupTextFieldsDelegates()
         setupDatePicker()
         
-        self.valueTextField.addToolbarToTextFields(doneFunction: #selector(didTapDone))
+        self.valueTextField.addToolbarToTextFields(doneAction: #selector(didTapDone), cancelAction: #selector(didTapCancel), barButtonTag: 0)
     }
     
     func setupDatePicker(){
@@ -35,13 +35,35 @@ class RegisterTransactionViewController: UIViewController {
         let datePicker = UIDatePicker(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 400))
         datePicker.datePickerMode = .date
         self.dateTextField.inputView = datePicker
-        self.dateTextField.addToolbarToTextFields(doneFunction: #selector(didTapDone))
+        self.dateTextField.addToolbarToTextFields(doneAction: #selector(didTapDone), cancelAction: #selector(didTapCancel), barButtonTag: 1)
     }
     
     
     
-    @objc func didTapDone(){
-        self.resignFirstResponder()
+    @objc func didTapDone(sender: UIBarButtonItem){
+        guard let textField = getTextFieldReferenceByTag(tag: sender.tag) else {
+            return
+        }
+        textField.resignFirstResponder()
+    }
+    
+    @objc func didTapCancel(sender: UIBarButtonItem){
+        guard let textField = getTextFieldReferenceByTag(tag: sender.tag) else {
+            return
+        }
+        textField.clearTextFieldContent()
+        textField.resignFirstResponder()
+    }
+    
+    func getTextFieldReferenceByTag(tag: Int) -> UITextField?{
+        switch tag {
+            case 0:
+                return self.valueTextField
+            case 1:
+                return self.dateTextField
+            default:
+                return nil
+        }
     }
     
     
@@ -54,19 +76,23 @@ class RegisterTransactionViewController: UIViewController {
     
     @IBAction func didChangeSegmentedControlOption(_ sender: UISegmentedControl) {
         
-        let segmentedControlCurrentStringValue = self.transactionOptionsSegmentedControl.titleForSegment(at: self.transactionOptionsSegmentedControl.selectedSegmentIndex)
+        guard let segmentedControlCurrentStringValue = self.transactionOptionsSegmentedControl.titleForSegment(at: self.transactionOptionsSegmentedControl.selectedSegmentIndex) else {
+            return
+        }
         
-        let newLabelString: String = {
-            switch segmentedControlCurrentStringValue {
-            case "Receita":
-                return "A receita foi recebida?"
-            default:
-                return "A despesa foi paga?"
-            }
-        }()
+        let newLabelString: String = getNewLabelString(segmentedControlCurrentStringValue)
         
         DispatchQueue.main.async {
             self.labelBelowSegmentedControl.text = newLabelString
+        }
+    }
+    
+    func getNewLabelString(_ segmentedControlCurrentStringValue: String) -> String {
+        switch segmentedControlCurrentStringValue {
+        case "Receita":
+            return "A receita foi recebida?"
+        default:
+            return "A despesa foi paga?"
         }
     }
     

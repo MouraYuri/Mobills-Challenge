@@ -10,12 +10,19 @@ import UIKit
 
 extension UITextField {
     
-    func addToolbarToTextFields(doneFunction: Selector){
+    func addToolbarToTextFields(doneAction: Selector, cancelAction: Selector, barButtonTag: Int){
         let screenWidth = UIScreen.main.bounds.width
         let toolBar = UIToolbar(frame: CGRect(x: 0.0, y: 0.0, width: screenWidth, height: 44.0))
         let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let barButton = UIBarButtonItem(title: "Ok", style: .plain, target: target, action: doneFunction)
-        toolBar.setItems([flexible, flexible, barButton], animated: false)
+        let cancelBarButton = UIBarButtonItem(title: "Cancelar", style: .plain, target: target, action: cancelAction)
+        let okBarButton = UIBarButtonItem(title: "Ok", style: .plain, target: target, action: doneAction)
+        okBarButton.tag = barButtonTag
+        cancelBarButton.tag = barButtonTag
+        toolBar.setItems([cancelBarButton, flexible, okBarButton], animated: false)
         self.inputAccessoryView = toolBar
+    }
+    
+    func clearTextFieldContent(){
+        self.text = nil
     }
 }
