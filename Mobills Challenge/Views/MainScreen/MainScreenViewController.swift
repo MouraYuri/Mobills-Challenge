@@ -8,11 +8,19 @@
 import UIKit
 
 class MainScreenViewController: UIViewController {
-
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .red
-        // Do any additional setup after loading the view.
+        setupTableView()
+    }
+    
+    func setupTableView(){
+        
     }
     
 }
+
+

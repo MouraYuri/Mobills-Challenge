@@ -15,9 +15,23 @@
                     <view key="view" contentMode="scaleToFill" id="z0i-bc-e5h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="82G-Qd-LFb">
+                                <rect key="frame" x="0.0" y="123" width="414" height="773"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="q4h-W5-3yk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="82G-Qd-LFb" firstAttribute="bottom" secondItem="z0i-bc-e5h" secondAttribute="bottom" id="8LD-LU-frA"/>
+                            <constraint firstItem="82G-Qd-LFb" firstAttribute="trailing" secondItem="z0i-bc-e5h" secondAttribute="trailing" id="HY6-35-6U4"/>
+                            <constraint firstItem="82G-Qd-LFb" firstAttribute="leading" secondItem="z0i-bc-e5h" secondAttribute="leading" id="tMv-Lv-fZf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="82G-Qd-LFb" id="7Fc-sH-weM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RZy-DN-SHC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
