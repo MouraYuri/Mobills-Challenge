@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController storyboardIdentifier="MainScreen" id="t0h-DR-pDp" customClass="MainScreenViewController" customModule="Mobills_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z0i-bc-e5h">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="82G-Qd-LFb">
-                                <rect key="frame" x="0.0" y="344" width="414" height="552"/>
+                                <rect key="frame" x="0.0" y="184.5" width="320" height="295.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -29,26 +29,36 @@
                                 </userDefinedRuntimeAttributes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOc-Gf-hic">
-                                <rect key="frame" x="322" y="284" width="76" height="36"/>
+                                <rect key="frame" x="141" y="124.5" width="163" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="iBR-Fd-XNp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Adicionar"/>
+                                <state key="normal" title="Adicionar Transação"/>
                                 <connections>
                                     <action selector="didTapAddButton:" destination="t0h-DR-pDp" eventType="touchUpInside" id="feI-Yk-iIQ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bem Vindo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQM-Qp-hgJ">
+                                <rect key="frame" x="20" y="44" width="128" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="q4h-W5-3yk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="82G-Qd-LFb" secondAttribute="bottom" id="6uv-Kq-QqD"/>
+                            <constraint firstItem="UQM-Qp-hgJ" firstAttribute="top" secondItem="q4h-W5-3yk" secondAttribute="top" constant="44" id="AAh-GL-oVN"/>
+                            <constraint firstItem="UQM-Qp-hgJ" firstAttribute="width" secondItem="z0i-bc-e5h" secondAttribute="width" multiplier="0.4" id="Cxd-da-7GT"/>
                             <constraint firstItem="82G-Qd-LFb" firstAttribute="leading" secondItem="z0i-bc-e5h" secondAttribute="leading" id="DOe-Yg-VW4"/>
                             <constraint firstItem="82G-Qd-LFb" firstAttribute="height" secondItem="z0i-bc-e5h" secondAttribute="height" multiplier="0.616071" id="KZB-Jq-dno"/>
                             <constraint firstItem="82G-Qd-LFb" firstAttribute="trailing" secondItem="z0i-bc-e5h" secondAttribute="trailing" id="PEN-Pf-1tY"/>
                             <constraint firstItem="BOc-Gf-hic" firstAttribute="bottom" secondItem="82G-Qd-LFb" secondAttribute="top" constant="-24" id="bl9-qJ-Fup"/>
+                            <constraint firstItem="UQM-Qp-hgJ" firstAttribute="height" secondItem="z0i-bc-e5h" secondAttribute="height" multiplier="0.07" id="cY6-cN-nIP"/>
                             <constraint firstItem="BOc-Gf-hic" firstAttribute="trailing" secondItem="82G-Qd-LFb" secondAttribute="trailing" constant="-16" id="hUG-Qb-Hyg"/>
+                            <constraint firstItem="UQM-Qp-hgJ" firstAttribute="leading" secondItem="q4h-W5-3yk" secondAttribute="leading" constant="20" id="jEc-qX-090"/>
                         </constraints>
                     </view>
                     <connections>

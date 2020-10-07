@@ -25,6 +25,7 @@ class MainScreenViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
         self.viewModel.mainScreenViewModelDelegate = self
+        self.navigationItem.title = "Mobills Challenge App"
     }
     
     override func viewWillAppear(_ animated: Bool) {
