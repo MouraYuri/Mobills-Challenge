@@ -31,8 +31,7 @@ class MainScreenViewController: UIViewController {
     @IBAction func didTapAddButton(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "RegisterTransaction", bundle: Bundle.main)
         let viewController = storyboard.instantiateViewController(withIdentifier: "RegisterTransaction")
-        viewController.modalPresentationStyle = .fullScreen
-        self.present(viewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
 }

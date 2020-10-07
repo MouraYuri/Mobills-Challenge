@@ -16,6 +16,7 @@
 		A053743B252D404E00991CE1 /* TransactionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A053743A252D404E00991CE1 /* TransactionsTableViewCell.swift */; };
 		A0537442252D71D200991CE1 /* RegisterTransaction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0537441252D71D200991CE1 /* RegisterTransaction.storyboard */; };
 		A0537445252D71E700991CE1 /* RegisterTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0537444252D71E700991CE1 /* RegisterTransactionViewController.swift */; };
+		A053744A252D8F5C00991CE1 /* TextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0537449252D8F5C00991CE1 /* TextFieldExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A053743A252D404E00991CE1 /* TransactionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewCell.swift; sourceTree = "<group>"; };
 		A0537441252D71D200991CE1 /* RegisterTransaction.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterTransaction.storyboard; sourceTree = "<group>"; };
 		A0537444252D71E700991CE1 /* RegisterTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTransactionViewController.swift; sourceTree = "<group>"; };
+		A0537449252D8F5C00991CE1 /* TextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		A0537439252D402A00991CE1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A0537448252D8F4200991CE1 /* UIKit Extensions */,
 				A053743E252D406B00991CE1 /* TableViewCells */,
 			);
 			path = Utils;
@@ -114,6 +117,14 @@
 				A0537444252D71E700991CE1 /* RegisterTransactionViewController.swift */,
 			);
 			path = RegisterTransactions;
+			sourceTree = "<group>";
+		};
+		A0537448252D8F4200991CE1 /* UIKit Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A0537449252D8F5C00991CE1 /* TextFieldExtensions.swift */,
+			);
+			path = "UIKit Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0537445252D71E700991CE1 /* RegisterTransactionViewController.swift in Sources */,
+				A053744A252D8F5C00991CE1 /* TextFieldExtensions.swift in Sources */,
 				A0537417252D311B00991CE1 /* AppDelegate.swift in Sources */,
 				A0537419252D311B00991CE1 /* SceneDelegate.swift in Sources */,
 				A053743B252D404E00991CE1 /* TransactionsTableViewCell.swift in Sources */,

@@ -25,7 +25,25 @@ class RegisterTransactionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTextFieldsDelegates()
+        setupDatePicker()
+        
+        self.valueTextField.addToolbarToTextFields(doneFunction: #selector(didTapDone))
     }
+    
+    func setupDatePicker(){
+        let screenWidth = UIScreen.main.bounds.width
+        let datePicker = UIDatePicker(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 400))
+        datePicker.datePickerMode = .date
+        self.dateTextField.inputView = datePicker
+        self.dateTextField.addToolbarToTextFields(doneFunction: #selector(didTapDone))
+    }
+    
+    
+    
+    @objc func didTapDone(){
+        self.resignFirstResponder()
+    }
+    
     
     func setupTextFieldsDelegates(){
         self.descriptionTextField.delegate = self
