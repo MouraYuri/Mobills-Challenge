@@ -41,4 +41,9 @@ extension MainScreenViewController: UITableViewDelegate, UITableViewDataSource {
         cell.config()
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let screenHeight = UIScreen.main.bounds.height
+        return screenHeight/8
+    }
 }

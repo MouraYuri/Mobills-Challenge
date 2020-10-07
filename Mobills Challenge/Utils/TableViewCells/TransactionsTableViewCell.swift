@@ -15,6 +15,9 @@ class TransactionsTableViewCell: UITableViewCell {
     lazy var transactionImage: UIImageView = {
         let obj = UIImageView()
         obj.translatesAutoresizingMaskIntoConstraints = false
+        obj.contentMode = .scaleAspectFit
+        let image = UIImage(named: "UpArrow") ?? UIImage()
+        obj.image = image
         return obj
     }()
     
@@ -48,9 +51,9 @@ class TransactionsTableViewCell: UITableViewCell {
         
         NSLayoutConstraint.activate([
             self.transactionImage.topAnchor.constraint(equalTo: self.contentView.topAnchor),
-            self.transactionImage.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
-            self.transactionImage.widthAnchor.constraint(equalTo: self.contentView.widthAnchor, multiplier: 0.2),
-            self.transactionImage.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -8)
+            self.transactionImage.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 8),
+            self.transactionImage.widthAnchor.constraint(equalToConstant: 35),
+            self.transactionImage.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor)
         ])
         
         NSLayoutConstraint.activate([
