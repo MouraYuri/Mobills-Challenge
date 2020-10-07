@@ -50,10 +50,10 @@ class TransactionsTableViewCell: UITableViewCell {
         self.contentView.addSubview(self.valueLabel)
         
         NSLayoutConstraint.activate([
-            self.transactionImage.topAnchor.constraint(equalTo: self.contentView.topAnchor),
+            self.transactionImage.heightAnchor.constraint(equalTo: self.contentView.heightAnchor, multiplier: 0.5),
+            self.transactionImage.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor),
             self.transactionImage.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 8),
-            self.transactionImage.widthAnchor.constraint(equalToConstant: 35),
-            self.transactionImage.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor)
+            self.transactionImage.widthAnchor.constraint(equalTo: self.contentView.widthAnchor, multiplier: 0.13),
         ])
         
         NSLayoutConstraint.activate([

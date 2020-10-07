@@ -13,7 +13,6 @@ class MainScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .red
         setupTableView()
     }
     
@@ -21,13 +20,15 @@ class MainScreenViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.register(TransactionsTableViewCell.self, forCellReuseIdentifier: TransactionsTableViewCell.identifier)
+        self.tableView.separatorStyle = .none
+        self.tableView.layer.borderColor = UIColor.lightGray.cgColor
     }
     
 }
 
 extension MainScreenViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return 2
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
