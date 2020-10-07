@@ -81,4 +81,14 @@ class FirestoreServices {
             }
         }
     }
+    
+    func deleteTransaction(transactionID: String, completion: @escaping((String?) -> Void) ) {
+        self.database.collection("Transactions").document(transactionID).delete { (error) in
+            if let _ = error {
+                completion(error.debugDescription)
+            } else {
+                completion(nil)
+            }
+        }
+    }
 }

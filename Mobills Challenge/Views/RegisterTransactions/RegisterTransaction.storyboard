@@ -97,6 +97,9 @@
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hb7-xU-H6A">
                                 <rect key="frame" x="358.33333333333331" y="62" width="45.666666666666686" height="53.666666666666657"/>
                                 <state key="normal" title="Button" image="deleteIcon"/>
+                                <connections>
+                                    <action selector="didTapExcludeButton:" destination="6o7-hD-Ulc" eventType="touchUpInside" id="9zN-ye-CBp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Y39-H6-wgF"/>

@@ -18,7 +18,7 @@ class RegisterTransactionViewModel {
     func registerNewTransaction(_ newTransaction: [String:Any]){
         FirestoreServices.shared.saveNewTransaction(newTransaction) { (error) in
             if let _ = error {
-                print(error)
+                
             } else {
                 print("Succesfully added!!")
             }
@@ -28,9 +28,19 @@ class RegisterTransactionViewModel {
     func updateExistingTransaction(_ transaction: [String:Any], transactionID: String) {
         FirestoreServices.shared.updateExistingTransaction(transactionID: transactionID, transaction: transaction) { (error) in
             if let _ = error {
-                print(error)
+                
             } else {
                 print("Succesfully Updated!!")
+            }
+        }
+    }
+    
+    func deleteTransaction(_ transactionID: String) {
+        FirestoreServices.shared.deleteTransaction(transactionID: transactionID) { (error) in
+            if let _ = error {
+                
+            } else {
+                print("Succesfully deleted!!")
             }
         }
     }

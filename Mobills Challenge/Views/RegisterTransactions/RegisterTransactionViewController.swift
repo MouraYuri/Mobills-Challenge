@@ -73,6 +73,13 @@ class RegisterTransactionViewController: UIViewController {
         updatelabelBelowSegmentedControlText()
     }
     
+    
+    @IBAction func didTapExcludeButton(_ sender: UIButton) {
+        if let transaction = self.transactionToBeEdited {
+            viewModel.deleteTransaction(transaction.documentID)
+        }
+    }
+    
     @objc func didTapDone(sender: UIBarButtonItem){
         guard let textField = getTextFieldReferenceByTag(tag: sender.tag) else {
             return
