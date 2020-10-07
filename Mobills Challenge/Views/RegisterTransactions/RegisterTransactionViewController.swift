@@ -57,6 +57,8 @@ class RegisterTransactionViewController: UIViewController {
         self.dateTextField.addToolbarToTextField(doneAction: #selector(didTapDone), cancelAction: #selector(didTapCancel), barButtonTag: 1)
     }
     
+    
+    
     private func prepareViewControllerToEdit(with transaction: Transaction){
         self.descriptionTextField.text = transaction.description
         self.valueTextField.text = String(transaction.value)
