@@ -11,6 +11,9 @@ class MainScreenViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    
+    @IBOutlet weak var addButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -22,6 +25,14 @@ class MainScreenViewController: UIViewController {
         self.tableView.register(TransactionsTableViewCell.self, forCellReuseIdentifier: TransactionsTableViewCell.identifier)
         self.tableView.separatorStyle = .none
         self.tableView.layer.borderColor = UIColor.lightGray.cgColor
+    }
+    
+    
+    @IBAction func didTapAddButton(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "RegisterTransaction", bundle: Bundle.main)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "RegisterTransaction")
+        viewController.modalPresentationStyle = .fullScreen
+        self.present(viewController, animated: true, completion: nil)
     }
     
 }

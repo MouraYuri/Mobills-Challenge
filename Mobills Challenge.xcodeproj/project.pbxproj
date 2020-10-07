@@ -14,6 +14,8 @@
 		A0537430252D31AB00991CE1 /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A053742F252D31AB00991CE1 /* MainScreen.storyboard */; };
 		A0537433252D31D200991CE1 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0537432252D31D200991CE1 /* MainScreenViewController.swift */; };
 		A053743B252D404E00991CE1 /* TransactionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A053743A252D404E00991CE1 /* TransactionsTableViewCell.swift */; };
+		A0537442252D71D200991CE1 /* RegisterTransaction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0537441252D71D200991CE1 /* RegisterTransaction.storyboard */; };
+		A0537445252D71E700991CE1 /* RegisterTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0537444252D71E700991CE1 /* RegisterTransactionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		A053742F252D31AB00991CE1 /* MainScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreen.storyboard; sourceTree = "<group>"; };
 		A0537432252D31D200991CE1 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		A053743A252D404E00991CE1 /* TransactionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewCell.swift; sourceTree = "<group>"; };
+		A0537441252D71D200991CE1 /* RegisterTransaction.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterTransaction.storyboard; sourceTree = "<group>"; };
+		A0537444252D71E700991CE1 /* RegisterTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTransactionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 		A053742D252D318300991CE1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A0537440252D71AD00991CE1 /* RegisterTransactions */,
 				A053742E252D318E00991CE1 /* MainScreen */,
 			);
 			path = Views;
@@ -100,6 +105,15 @@
 				A053743A252D404E00991CE1 /* TransactionsTableViewCell.swift */,
 			);
 			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		A0537440252D71AD00991CE1 /* RegisterTransactions */ = {
+			isa = PBXGroup;
+			children = (
+				A0537441252D71D200991CE1 /* RegisterTransaction.storyboard */,
+				A0537444252D71E700991CE1 /* RegisterTransactionViewController.swift */,
+			);
+			path = RegisterTransactions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0537442252D71D200991CE1 /* RegisterTransaction.storyboard in Resources */,
 				A0537423252D312000991CE1 /* LaunchScreen.storyboard in Resources */,
 				A0537420252D311F00991CE1 /* Assets.xcassets in Resources */,
 				A0537430252D31AB00991CE1 /* MainScreen.storyboard in Resources */,
@@ -172,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0537445252D71E700991CE1 /* RegisterTransactionViewController.swift in Sources */,
 				A0537417252D311B00991CE1 /* AppDelegate.swift in Sources */,
 				A0537419252D311B00991CE1 /* SceneDelegate.swift in Sources */,
 				A053743B252D404E00991CE1 /* TransactionsTableViewCell.swift in Sources */,
