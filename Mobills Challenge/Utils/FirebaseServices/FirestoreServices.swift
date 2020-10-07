@@ -28,9 +28,7 @@ class FirestoreServices {
                     let transactions = self.parseDocumentsToTransactionType(documents: query!.documents)
                     completion(transactions, nil)
                 }
-                
             }
-            
         }
     }
     

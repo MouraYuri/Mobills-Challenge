@@ -8,23 +8,23 @@
 import Foundation
 import Firebase
 
-protocol ViewModelDelegate: class {
+protocol MainScreenViewModelDelegate: class {
     func didFinishFetching(values: [Any])
     func didFinishFetchingWithError(message: String)
 }
 
 class MainScreenViewModel {
     
-    weak var viewModelDelegate: ViewModelDelegate?
+    weak var mainScreenViewModelDelegate: MainScreenViewModelDelegate?
     
     func getTransactions(userID: String){
         FirestoreServices.shared.getTransactionsForAUser(userID: userID) { (transactions, error) in
             if let err = error {
-                self.viewModelDelegate?.didFinishFetchingWithError(message: err)
+                self.mainScreenViewModelDelegate?.didFinishFetchingWithError(message: err)
                 return
             } else {
                 if let transactions = transactions {
-                    self.viewModelDelegate?.didFinishFetching(values: transactions)
+                    self.mainScreenViewModelDelegate?.didFinishFetching(values: transactions)
                 }
                 return
             }

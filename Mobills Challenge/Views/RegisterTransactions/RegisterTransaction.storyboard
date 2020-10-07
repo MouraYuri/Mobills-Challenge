@@ -94,7 +94,7 @@
                                     <action selector="didTapFinalizeButton:" destination="6o7-hD-Ulc" eventType="touchUpInside" id="3DD-iK-DH0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hb7-xU-H6A">
+                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hb7-xU-H6A">
                                 <rect key="frame" x="358.33333333333331" y="62" width="45.666666666666686" height="53.666666666666657"/>
                                 <state key="normal" title="Button" image="deleteIcon"/>
                                 <connections>
@@ -151,6 +151,7 @@
                     <connections>
                         <outlet property="dateTextField" destination="WLK-kH-8Kn" id="aVR-aD-PNv"/>
                         <outlet property="descriptionTextField" destination="V7i-dG-acU" id="bLk-IT-Wlw"/>
+                        <outlet property="excludeButton" destination="Hb7-xU-H6A" id="J9M-1C-jhQ"/>
                         <outlet property="finalizeButton" destination="VY6-eW-ARQ" id="qiC-c7-geh"/>
                         <outlet property="labelBelowSegmentedControl" destination="XOA-wQ-sBM" id="MLh-uW-cy0"/>
                         <outlet property="transactionOptionsSegmentedControl" destination="MFu-FH-ftI" id="cef-lH-WiQ"/>

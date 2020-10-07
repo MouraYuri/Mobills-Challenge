@@ -24,7 +24,7 @@ class MainScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        self.viewModel.viewModelDelegate = self
+        self.viewModel.mainScreenViewModelDelegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -80,12 +80,10 @@ extension MainScreenViewController: UITableViewDelegate, UITableViewDataSource {
             viewController.transactionToBeEdited = transaction
             self.navigationController?.pushViewController(viewController, animated: true)
         }
-        
-        
     }
 }
 
-extension MainScreenViewController: ViewModelDelegate {
+extension MainScreenViewController: MainScreenViewModelDelegate {
     func didFinishFetching(values: [Any]) {
         guard let transactions = values as? [Transaction] else {
             return

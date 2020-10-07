@@ -38,8 +38,12 @@ class RegisterTransactionViewController: UIViewController {
     
     @IBOutlet weak var transactionStatusSwitch: UISwitch!
     
+    @IBOutlet weak var excludeButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.viewModel.registerTransactionViewModelDelegate = self
         
         if self.updatingValues{
             if let transaction = transactionToBeEdited {
@@ -63,6 +67,7 @@ class RegisterTransactionViewController: UIViewController {
         self.descriptionTextField.text = transaction.description
         self.valueTextField.text = String(transaction.value)
         self.dateTextField.text = transaction.date.toString(dateFormat: "dd/MM/yyyy")
+        
         switch transaction.transactionType {
         case "Receita":
             self.transactionOptionsSegmentedControl.selectedSegmentIndex = 1
@@ -70,7 +75,9 @@ class RegisterTransactionViewController: UIViewController {
         default:
             self.transactionStatusSwitch.isOn = transaction.status == "Pago" ? true : false
         }
+        
         updatelabelBelowSegmentedControlText()
+        self.excludeButton.isHidden = false
     }
     
     
@@ -182,15 +189,12 @@ class RegisterTransactionViewController: UIViewController {
     
     @IBAction func didTapFinalizeButton(_ sender: UIButton) {
         self.registerNewTransaction()
-        self.dismiss(animated: true, completion: nil)
     }
     
     func registerNewTransaction(){
         self.updateNewTransactionStatusAndType()
         if !self.updatingValues{
-            
             self.viewModel.registerNewTransaction(self.transactionDict)
-            
         } else {
             if let documentID = self.transactionToBeEdited?.documentID {
                 
@@ -229,5 +233,15 @@ extension RegisterTransactionViewController: UITextFieldDelegate {
             default:
                 return
         }
+    }
+}
+
+extension RegisterTransactionViewController: RegisterTransactionViewModelDelegate{
+    func didFinishAction() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    func didFinishActionWithError(error: String) {
+        
     }
 }
