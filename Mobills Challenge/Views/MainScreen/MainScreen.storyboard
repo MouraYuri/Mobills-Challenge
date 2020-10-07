@@ -45,14 +45,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sem registros de transações" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdd-Bq-gGW">
+                                <rect key="frame" x="33" y="85" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="q4h-W5-3yk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="vdd-Bq-gGW" firstAttribute="centerY" secondItem="82G-Qd-LFb" secondAttribute="centerY" id="4ML-Bl-LsR"/>
+                            <constraint firstItem="vdd-Bq-gGW" firstAttribute="centerX" secondItem="82G-Qd-LFb" secondAttribute="centerX" id="6Zi-ud-diO"/>
                             <constraint firstAttribute="bottom" secondItem="82G-Qd-LFb" secondAttribute="bottom" id="6uv-Kq-QqD"/>
                             <constraint firstItem="UQM-Qp-hgJ" firstAttribute="top" secondItem="q4h-W5-3yk" secondAttribute="top" constant="44" id="AAh-GL-oVN"/>
                             <constraint firstItem="UQM-Qp-hgJ" firstAttribute="width" secondItem="z0i-bc-e5h" secondAttribute="width" multiplier="0.4" id="Cxd-da-7GT"/>
                             <constraint firstItem="82G-Qd-LFb" firstAttribute="leading" secondItem="z0i-bc-e5h" secondAttribute="leading" id="DOe-Yg-VW4"/>
+                            <constraint firstItem="vdd-Bq-gGW" firstAttribute="top" secondItem="82G-Qd-LFb" secondAttribute="top" id="IkM-ob-czS"/>
                             <constraint firstItem="82G-Qd-LFb" firstAttribute="height" secondItem="z0i-bc-e5h" secondAttribute="height" multiplier="0.616071" id="KZB-Jq-dno"/>
                             <constraint firstItem="82G-Qd-LFb" firstAttribute="trailing" secondItem="z0i-bc-e5h" secondAttribute="trailing" id="PEN-Pf-1tY"/>
                             <constraint firstItem="BOc-Gf-hic" firstAttribute="bottom" secondItem="82G-Qd-LFb" secondAttribute="top" constant="-24" id="bl9-qJ-Fup"/>
@@ -63,6 +72,7 @@
                     </view>
                     <connections>
                         <outlet property="addButton" destination="BOc-Gf-hic" id="CWi-zL-LaE"/>
+                        <outlet property="noDataLabel" destination="vdd-Bq-gGW" id="UNq-zA-Q65"/>
                         <outlet property="tableView" destination="82G-Qd-LFb" id="7Fc-sH-weM"/>
                     </connections>
                 </viewController>

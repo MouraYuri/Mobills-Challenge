@@ -11,6 +11,7 @@ class MainScreenViewController: UIViewController {
     
     var transactionsArray: [Transaction] = [] {
         didSet {
+            self.noDataLabel.isHidden = self.transactionsArray.isEmpty ? false : true
             self.tableView.reloadData()
         }
     }
@@ -20,6 +21,8 @@ class MainScreenViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var addButton: UIButton!
+    
+    @IBOutlet weak var noDataLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
