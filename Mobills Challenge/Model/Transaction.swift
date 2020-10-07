@@ -9,6 +9,7 @@ import Foundation
 import Firebase
 
 class Transaction {
+    let documentID: String
     let transactionType: String
     let description: String
     let value: Double
@@ -24,5 +25,6 @@ class Transaction {
         self.date = temp.dateValue()
         self.status = document["status"] as? String  ?? "not specified"
         self.UserID = document["user"] as? String ?? "not specified"
+        self.documentID = document.documentID
     }
 }

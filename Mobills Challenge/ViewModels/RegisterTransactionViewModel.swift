@@ -24,4 +24,14 @@ class RegisterTransactionViewModel {
             }
         }
     }
+    
+    func updateExistingTransaction(_ transaction: [String:Any], transactionID: String) {
+        FirestoreServices.shared.updateExistingTransaction(transactionID: transactionID, transaction: transaction) { (error) in
+            if let _ = error {
+                print(error)
+            } else {
+                print("Succesfully Updated!!")
+            }
+        }
+    }
 }

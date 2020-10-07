@@ -70,4 +70,15 @@ class FirestoreServices {
             }
         }
     }
+    
+    func updateExistingTransaction(transactionID: String, transaction: [String:Any], completion: @escaping((String?) -> Void)){
+        let documentRef = self.database.collection("Transactions").document(transactionID)
+        documentRef.updateData(transaction) { (error) in
+            if let _ = error {
+                completion(error.debugDescription)
+            } else {
+                completion(nil)
+            }
+        }
+    }
 }

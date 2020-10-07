@@ -71,6 +71,18 @@ extension MainScreenViewController: UITableViewDelegate, UITableViewDataSource {
         let screenHeight = UIScreen.main.bounds.height
         return screenHeight/8
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let transaction = self.transactionsArray[indexPath.row]
+        let storyboard = UIStoryboard(name: "RegisterTransaction", bundle: Bundle.main)
+        if let viewController = storyboard.instantiateViewController(withIdentifier: "RegisterTransaction") as? RegisterTransactionViewController {
+            viewController.updatingValues = true
+            viewController.transactionToBeEdited = transaction
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
+        
+        
+    }
 }
 
 extension MainScreenViewController: ViewModelDelegate {
@@ -87,10 +99,5 @@ extension MainScreenViewController: ViewModelDelegate {
     
     
     func showAlertWithErrorMessage(_ message: String){
-        let alert = UIAlertView()
-        alert.title = "Atenção"
-        alert.message = message
-        alert.addButton(withTitle: "Ok")
-        alert.show()
     }
 }

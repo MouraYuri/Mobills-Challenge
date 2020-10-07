@@ -73,9 +73,6 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eIQ-F2-ujg">
                                 <rect key="frame" x="89" y="477" width="51" height="31"/>
-                                <connections>
-                                    <action selector="didChangeStatusSwitchValue:" destination="6o7-hD-Ulc" eventType="valueChanged" id="FP6-mD-OMK"/>
-                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Não" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCH-yu-gHW">
                                 <rect key="frame" x="51.666666666666664" y="482.66666666666669" width="29.333333333333336" height="20"/>
