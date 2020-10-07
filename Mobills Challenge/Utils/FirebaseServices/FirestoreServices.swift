@@ -60,4 +60,14 @@ class FirestoreServices {
         }
         return transactions
     }
+    
+    func saveNewTransaction(_ newTransaction: [String:Any], completion: @escaping((String?) -> Void)) {
+        self.database.collection("Transactions").addDocument(data: newTransaction) { (error) in
+            if let _ = error {
+                completion(error.debugDescription)
+            } else {
+                completion(nil)
+            }
+        }
+    }
 }

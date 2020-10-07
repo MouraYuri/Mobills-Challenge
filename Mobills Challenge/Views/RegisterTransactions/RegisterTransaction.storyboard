@@ -28,7 +28,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: Conta de luz" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V7i-dG-acU">
+                            <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: Conta de luz" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V7i-dG-acU">
                                 <rect key="frame" x="41.333333333333343" y="136.66666666666666" width="331.33333333333326" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -50,7 +50,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: 04/06/2000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WLK-kH-8Kn">
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: 04/06/2000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WLK-kH-8Kn">
                                 <rect key="frame" x="41.333333333333343" y="333" width="331.33333333333326" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
@@ -73,6 +73,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eIQ-F2-ujg">
                                 <rect key="frame" x="89" y="477" width="51" height="31"/>
+                                <connections>
+                                    <action selector="didChangeStatusSwitchValue:" destination="6o7-hD-Ulc" eventType="valueChanged" id="FP6-mD-OMK"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Não" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCH-yu-gHW">
                                 <rect key="frame" x="51.666666666666664" y="482.66666666666669" width="29.333333333333336" height="20"/>
@@ -143,6 +146,7 @@
                         <outlet property="finalizeButton" destination="VY6-eW-ARQ" id="qiC-c7-geh"/>
                         <outlet property="labelBelowSegmentedControl" destination="XOA-wQ-sBM" id="MLh-uW-cy0"/>
                         <outlet property="transactionOptionsSegmentedControl" destination="MFu-FH-ftI" id="cef-lH-WiQ"/>
+                        <outlet property="transactionStatusSwitch" destination="eIQ-F2-ujg" id="CYf-ND-FW3"/>
                         <outlet property="valueTextField" destination="RKw-dM-rU9" id="DPJ-F2-CgH"/>
                     </connections>
                 </viewController>

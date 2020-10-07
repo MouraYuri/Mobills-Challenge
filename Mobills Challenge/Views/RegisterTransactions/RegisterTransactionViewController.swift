@@ -9,6 +9,15 @@ import UIKit
 
 class RegisterTransactionViewController: UIViewController {
     
+    var newTransaction: [String:Any] = [
+        "type":"Despesa",
+        "description":"Pago",
+        "value":0.0,
+        "data":Date(),
+        "status":"",
+        "user":"GnR7KuYTyzX14sW2ReDt"
+    ]
+    
     let viewModel = RegisterTransactionViewModel()
 
     @IBOutlet weak var descriptionTextField: UITextField!
@@ -22,6 +31,9 @@ class RegisterTransactionViewController: UIViewController {
     @IBOutlet weak var transactionOptionsSegmentedControl: UISegmentedControl!
     
     @IBOutlet weak var finalizeButton: UIButton!
+    
+    @IBOutlet weak var transactionStatusSwitch: UISwitch!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,18 +83,42 @@ class RegisterTransactionViewController: UIViewController {
         self.dateTextField.delegate = self
     }
     
-    
-    @IBAction func didChangeSegmentedControlOption(_ sender: UISegmentedControl) {
-        
-        guard let segmentedControlCurrentStringValue = self.transactionOptionsSegmentedControl.titleForSegment(at: self.transactionOptionsSegmentedControl.selectedSegmentIndex) else {
+    func updateNewTransactionStatusAndType(){
+        guard let segmentedControlCurrentStringValue = self.getSegmentedControlCurrentStringValue() else {
             return
         }
-        
+        if segmentedControlCurrentStringValue == "Despesa" {
+            self.newTransaction["type"] = "Despesa"
+            self.newTransaction["status"] = transactionStatusSwitch.isOn ? "Pago" : "Não Pago"
+        } else {
+            self.newTransaction["type"] = "Receita"
+            self.newTransaction["status"] = transactionStatusSwitch.isOn ? "Recebido" : "Não Recebido"
+        }
+    }
+    
+    
+    @IBAction func didChangeSegmentedControlOption(_ sender: UISegmentedControl) {
+        guard let segmentedControlCurrentStringValue = self.getSegmentedControlCurrentStringValue() else {
+            return
+        }
         let newLabelString: String = getLabelBelowSegmentedControlNewString(segmentedControlCurrentStringValue)
         
         DispatchQueue.main.async {
             self.labelBelowSegmentedControl.text = newLabelString
         }
+    }
+    
+    @IBAction func didChangeStatusSwitchValue(_ sender: UISwitch) {
+        /*
+         
+         REMOVE THIS LATER
+         
+         */
+    }
+    
+    
+    func getSegmentedControlCurrentStringValue() -> String? {
+        return self.transactionOptionsSegmentedControl.titleForSegment(at: self.transactionOptionsSegmentedControl.selectedSegmentIndex)
     }
     
     func getLabelBelowSegmentedControlNewString(_ segmentedControlCurrentStringValue: String) -> String {
@@ -94,12 +130,22 @@ class RegisterTransactionViewController: UIViewController {
         }
     }
     
-    
-    @IBAction func didTapFinalizeButton(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
-        self.viewModel.getUsers()
+    func getValueTextFieldTextFormatted() -> String{
+        guard let currentTextFieldValue = self.valueTextField.text else{
+            return ""
+        }
+        return currentTextFieldValue != "" ? "R$ \(currentTextFieldValue)" : ""
     }
     
+    
+    @IBAction func didTapFinalizeButton(_ sender: UIButton) {
+        self.registerNewTransaction()
+        self.dismiss(animated: true, completion: nil)
+    }
+    func registerNewTransaction(){
+        self.updateNewTransactionStatusAndType()
+        self.viewModel.registerNewTransaction(self.newTransaction)
+    }
 }
 
 extension RegisterTransactionViewController: UITextFieldDelegate {
@@ -107,5 +153,27 @@ extension RegisterTransactionViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        switch textField.tag {
+            case 0:
+                let value = Double(textField.text ?? "0.0")
+                self.newTransaction["value"] = value
+                self.valueTextField.text = getValueTextFieldTextFormatted()
+            case 3:
+                self.newTransaction["description"] = self.descriptionTextField.text
+            default:
+                return
+        }
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        switch textField.tag {
+            case 0:
+                textField.text = nil
+            default:
+                return
+        }
     }
 }

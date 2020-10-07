@@ -15,9 +15,13 @@ enum Collection: String {
 
 class RegisterTransactionViewModel {
     
-    func getUsers(){
-        FirestoreServices.shared.getDocuments(collection: .transactions) { (documents, error) in
-            
+    func registerNewTransaction(_ newTransaction: [String:Any]){
+        FirestoreServices.shared.saveNewTransaction(newTransaction) { (error) in
+            if let _ = error {
+                print(error)
+            } else {
+                print("Succesfully added!!")
+            }
         }
     }
 }

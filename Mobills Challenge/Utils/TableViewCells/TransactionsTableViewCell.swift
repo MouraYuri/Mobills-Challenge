@@ -16,8 +16,6 @@ class TransactionsTableViewCell: UITableViewCell {
         let obj = UIImageView()
         obj.translatesAutoresizingMaskIntoConstraints = false
         obj.contentMode = .scaleAspectFit
-        let image = UIImage(named: "DownArrow") ?? UIImage()
-        obj.image = image
         return obj
     }()
     
@@ -82,6 +80,7 @@ class TransactionsTableViewCell: UITableViewCell {
             self.transactionImage.image = UIImage(named: "UpArrow")
             self.valueLabel.textColor = .red
         } else {
+            self.transactionImage.image = UIImage(named: "DownArrow")
             self.valueLabel.textColor = .systemGreen
         }
     }
