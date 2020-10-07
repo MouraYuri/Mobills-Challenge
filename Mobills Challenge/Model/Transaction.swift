@@ -10,17 +10,18 @@ import Firebase
 
 class Transaction {
     let transactionType: String
-    let descriptions: String
-    let valor: Float
-    let data: Date
+    let description: String
+    let value: Double
+    let date: Date
     let status: String
     let UserID: String
     
     init(document: QueryDocumentSnapshot){
-        self.transactionType = document["type"] as? String ?? "D"
-        self.descriptions = document["description"] as? String ?? "not specified"
-        self.valor = document["value"] as? Float  ?? 0.0
-        self.data = document["data"] as? Date  ?? Date()
+        self.transactionType = document["type"] as? String ?? "Despesa"
+        self.description = document["description"] as? String ?? "not specified"
+        self.value = document["value"] as? Double ?? 0.0
+        let temp = document["data"] as? Timestamp  ?? Timestamp()
+        self.date = temp.dateValue()
         self.status = document["status"] as? String  ?? "not specified"
         self.UserID = document["user"] as? String ?? "not specified"
     }

@@ -16,7 +16,7 @@ class TransactionsTableViewCell: UITableViewCell {
         let obj = UIImageView()
         obj.translatesAutoresizingMaskIntoConstraints = false
         obj.contentMode = .scaleAspectFit
-        let image = UIImage(named: "UpArrow") ?? UIImage()
+        let image = UIImage(named: "DownArrow") ?? UIImage()
         obj.image = image
         return obj
     }()
@@ -74,7 +74,35 @@ class TransactionsTableViewCell: UITableViewCell {
         ])
     }
     
-    func config(){
+    func config(_ transaction: Transaction){
         self.setupConstraints()
+        self.updateCellLabelsValues(transaction)
+        
+        if transactionTypeIsExpense(transaction) {
+            self.transactionImage.image = UIImage(named: "UpArrow")
+            self.valueLabel.textColor = .red
+        } else {
+            self.valueLabel.textColor = .systemGreen
+        }
+    }
+    
+    func updateCellLabelsValues(_ transaction: Transaction){
+        self.descriptionLabel.text = transaction.description
+        self.valueLabel.text = convertValueToLocalCurrency(transaction.value)
+        self.dateAndStatusLabel.text = createDateAndStatusLabelText(date: transaction.date, status: transaction.status)
+    }
+    
+    func transactionTypeIsExpense(_ transaction: Transaction) -> Bool {
+        return transaction.transactionType == "Despesa"
+    }
+    
+    func convertValueToLocalCurrency(_ value: Double) -> String{
+        return "R$ \(value)"
+    }
+    
+    func createDateAndStatusLabelText(date: Date, status: String) -> String {
+        var string = date.toString(dateFormat: "dd/MM/yyyy")
+        string = string + " | " + status
+        return string
     }
 }

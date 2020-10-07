@@ -24,6 +24,7 @@
 		A059D2A9252E0B1F00F571C9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A059D2A8252E0B1F00F571C9 /* User.swift */; };
 		A059D2AC252E115C00F571C9 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A059D2AB252E115C00F571C9 /* Transaction.swift */; };
 		A059D2AF252E180800F571C9 /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A059D2AE252E180800F571C9 /* MainScreenViewModel.swift */; };
+		A059D2B2252E2AE400F571C9 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A059D2B1252E2AE400F571C9 /* DateExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		A059D2A8252E0B1F00F571C9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A059D2AB252E115C00F571C9 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		A059D2AE252E180800F571C9 /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
+		A059D2B1252E2AE400F571C9 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		BE696E29A194B73F5E069118 /* Pods_Mobills_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mobills_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC19AE78A71EEA3E2E5AB94A /* Pods-Mobills Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobills Challenge.release.xcconfig"; path = "Target Support Files/Pods-Mobills Challenge/Pods-Mobills Challenge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,7 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				A059D29C252E041900F571C9 /* FirebaseServices */,
-				A0537448252D8F4200991CE1 /* UIKit Extensions */,
+				A0537448252D8F4200991CE1 /* Extensions */,
 				A053743E252D406B00991CE1 /* TableViewCells */,
 			);
 			path = Utils;
@@ -151,12 +153,13 @@
 			path = RegisterTransactions;
 			sourceTree = "<group>";
 		};
-		A0537448252D8F4200991CE1 /* UIKit Extensions */ = {
+		A0537448252D8F4200991CE1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				A0537449252D8F5C00991CE1 /* TextFieldExtensions.swift */,
+				A059D2B1252E2AE400F571C9 /* DateExtensions.swift */,
 			);
-			path = "UIKit Extensions";
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A059D29C252E041900F571C9 /* FirebaseServices */ = {
@@ -314,6 +317,7 @@
 				A053744A252D8F5C00991CE1 /* TextFieldExtensions.swift in Sources */,
 				A0537417252D311B00991CE1 /* AppDelegate.swift in Sources */,
 				A0537419252D311B00991CE1 /* SceneDelegate.swift in Sources */,
+				A059D2B2252E2AE400F571C9 /* DateExtensions.swift in Sources */,
 				A059D2AC252E115C00F571C9 /* Transaction.swift in Sources */,
 				A059D2A4252E05DE00F571C9 /* RegisterTransactionViewModel.swift in Sources */,
 				A059D2A9252E0B1F00F571C9 /* User.swift in Sources */,

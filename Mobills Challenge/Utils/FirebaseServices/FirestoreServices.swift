@@ -34,8 +34,8 @@ class FirestoreServices {
         }
     }
     
-    func queryTransactionsForAUser(userID: String, completion: @escaping (([Transaction]?, String?) -> Void)){
-        self.database.collection("Users").whereField("user", isEqualTo: userID).getDocuments { (query, error) in
+    func getTransactionsForAUser(userID: String, completion: @escaping (([Transaction]?, String?) -> Void)){
+        self.database.collection("Transactions").whereField("user", isEqualTo: "GnR7KuYTyzX14sW2ReDt").getDocuments() { (query, error) in
             if let _ = error {
                 completion(nil, error.debugDescription)
             } else {

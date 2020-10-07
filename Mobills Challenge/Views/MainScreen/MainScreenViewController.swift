@@ -9,14 +9,27 @@ import UIKit
 
 class MainScreenViewController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
+    var transactionsArray: [Transaction] = [] {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
     
+    let viewModel = MainScreenViewModel()
+    
+    @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var addButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        self.viewModel.viewModelDelegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.viewModel.getTransactions(userID: "Users/GnR7KuYTyzX14sW2ReDt")
     }
     
     func setupTableView(){
@@ -38,7 +51,7 @@ class MainScreenViewController: UIViewController {
 
 extension MainScreenViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return self.transactionsArray.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -49,12 +62,35 @@ extension MainScreenViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TransactionsTableViewCell.identifier) as? TransactionsTableViewCell else {
             return UITableViewCell()
         }
-        cell.config()
+        let transaction = self.transactionsArray[indexPath.row]
+        cell.config(transaction)
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let screenHeight = UIScreen.main.bounds.height
         return screenHeight/8
+    }
+}
+
+extension MainScreenViewController: ViewModelDelegate {
+    func didFinishFetching(values: [Any]) {
+        guard let transactions = values as? [Transaction] else {
+            return
+        }
+        self.transactionsArray = transactions
+    }
+    
+    func didFinishFetchingWithError(message: String) {
+        showAlertWithErrorMessage(message)
+    }
+    
+    
+    func showAlertWithErrorMessage(_ message: String){
+        let alert = UIAlertView()
+        alert.title = "Atenção"
+        alert.message = message
+        alert.addButton(withTitle: "Ok")
+        alert.show()
     }
 }
