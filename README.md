@@ -14,6 +14,7 @@ Simple CRUD app where user can:
 * Charts
 
 ### About the project
+* Build in Xcode 12
 * MVVM Architecture used
 * Swift
 * Storyboard
