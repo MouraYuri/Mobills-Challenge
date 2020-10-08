@@ -88,7 +88,7 @@ extension MainScreenViewController: UITableViewDelegate, UITableViewDataSource {
         let transaction = self.transactionsArray[indexPath.row]
         let storyboard = UIStoryboard(name: "RegisterTransaction", bundle: Bundle.main)
         if let viewController = storyboard.instantiateViewController(withIdentifier: "RegisterTransaction") as? RegisterTransactionViewController {
-            viewController.updatingValues = true
+            viewController.setUpdatingValues(value: true)
             viewController.transactionToBeEdited = transaction
             self.navigationController?.pushViewController(viewController, animated: true)
         }
