@@ -18,7 +18,7 @@ class RegisterTransactionViewController: UIViewController {
         "user":"GnR7KuYTyzX14sW2ReDt"
     ]
     
-    var updatingValues: Bool = false
+    private var updatingValues: Bool = false
     
     var transactionToBeEdited: Transaction?
     
@@ -40,6 +40,8 @@ class RegisterTransactionViewController: UIViewController {
     
     @IBOutlet weak var excludeButton: UIButton!
     
+    @IBOutlet weak var topLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,6 +56,10 @@ class RegisterTransactionViewController: UIViewController {
         setupDatePicker()
         
         self.valueTextField.addToolbarToTextField(doneAction: #selector(didTapDone), cancelAction: #selector(didTapCancel), barButtonTag: 0)
+    }
+    
+    func setUpdatingValues(value: Bool){
+        self.updatingValues = value
     }
     
     func setupDatePicker(){
@@ -86,6 +92,7 @@ class RegisterTransactionViewController: UIViewController {
         updatelabelBelowSegmentedControlText()
         self.excludeButton.isHidden = false
         self.finalizeButton.setTitle("Salvar", for: .normal)
+        self.topLabel.text = "Editar uma transação existente"
     }
     
     

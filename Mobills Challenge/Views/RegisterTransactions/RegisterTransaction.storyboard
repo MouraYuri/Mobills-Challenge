@@ -17,8 +17,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adicionar nova transação" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3l6-gw-0IQ">
-                                <rect key="frame" x="41.333333333333329" y="44.000000000000007" width="239.33333333333337" height="89.666666666666686"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <rect key="frame" x="41.333333333333329" y="44.000000000000007" width="220.33333333333337" height="89.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -178,6 +178,7 @@
                         <outlet property="excludeButton" destination="Hb7-xU-H6A" id="J9M-1C-jhQ"/>
                         <outlet property="finalizeButton" destination="VY6-eW-ARQ" id="qiC-c7-geh"/>
                         <outlet property="labelBelowSegmentedControl" destination="XOA-wQ-sBM" id="MLh-uW-cy0"/>
+                        <outlet property="topLabel" destination="3l6-gw-0IQ" id="sLW-n7-Bal"/>
                         <outlet property="transactionOptionsSegmentedControl" destination="MFu-FH-ftI" id="cef-lH-WiQ"/>
                         <outlet property="transactionStatusSwitch" destination="eIQ-F2-ujg" id="CYf-ND-FW3"/>
                         <outlet property="valueTextField" destination="RKw-dM-rU9" id="DPJ-F2-CgH"/>

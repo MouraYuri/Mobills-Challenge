@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Statistics Screen View Controller-->
+        <scene sceneID="l0d-ES-ZpM">
+            <objects>
+                <viewController storyboardIdentifier="StatisticsScreen" id="7MQ-0o-vNU" customClass="StatisticsScreenViewController" customModule="Mobills_Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wha-Qp-mwD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Kis-es-BUl" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="138.00000000000003" width="375" height="391.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estatísticas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5y-8g-foG">
+                                <rect key="frame" x="20.000000000000007" y="63.999999999999993" width="127.66666666666669" height="29.666666666666664"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Despesas totais:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBF-gJ-Je5">
+                                <rect key="frame" x="22" y="118.66666666666667" width="187.66666666666666" height="23.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zms-yu-Pee">
+                                <rect key="frame" x="255.33333333333334" y="119.33333333333331" width="93.666666666666657" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receitas totais:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eab-gZ-OMq">
+                                <rect key="frame" x="22" y="155.33333333333334" width="187.66666666666666" height="23.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8F-Ww-bK6">
+                                <rect key="frame" x="255.33333333333334" y="155.33333333333334" width="93.666666666666657" height="23.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Gye-AY-Pmb">
+                                <rect key="frame" x="209" y="63" width="150" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Mudar Visualização"/>
+                                <connections>
+                                    <action selector="didTapChangeVisualizationButton:" destination="7MQ-0o-vNU" eventType="touchUpInside" id="61s-S7-hVT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vsg-a1-B0a"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Gye-AY-Pmb" firstAttribute="centerY" secondItem="V5y-8g-foG" secondAttribute="centerY" id="0V5-cL-XDg"/>
+                            <constraint firstItem="Eab-gZ-OMq" firstAttribute="height" secondItem="wha-Qp-mwD" secondAttribute="height" multiplier="0.04375" id="0wG-64-ot4"/>
+                            <constraint firstItem="FBF-gJ-Je5" firstAttribute="leading" secondItem="V5y-8g-foG" secondAttribute="leading" id="3yQ-sJ-n3v"/>
+                            <constraint firstItem="V5y-8g-foG" firstAttribute="height" secondItem="wha-Qp-mwD" secondAttribute="height" multiplier="0.05625" id="75z-JZ-jkx"/>
+                            <constraint firstItem="Zms-yu-Pee" firstAttribute="centerY" secondItem="FBF-gJ-Je5" secondAttribute="centerY" id="8zw-cc-ojQ"/>
+                            <constraint firstItem="Kis-es-BUl" firstAttribute="centerX" secondItem="Vsg-a1-B0a" secondAttribute="centerX" id="9A2-hy-Xtb"/>
+                            <constraint firstItem="Eab-gZ-OMq" firstAttribute="top" secondItem="FBF-gJ-Je5" secondAttribute="bottom" constant="13.5" id="9zb-US-Dpb"/>
+                            <constraint firstItem="V5y-8g-foG" firstAttribute="leading" secondItem="Vsg-a1-B0a" secondAttribute="leading" constant="20" id="Cyz-jc-1c5"/>
+                            <constraint firstItem="FBF-gJ-Je5" firstAttribute="width" secondItem="wha-Qp-mwD" secondAttribute="width" multiplier="0.5" id="DWi-HT-l5M"/>
+                            <constraint firstItem="Gye-AY-Pmb" firstAttribute="width" secondItem="wha-Qp-mwD" secondAttribute="width" multiplier="0.4" id="DZR-zO-Sft"/>
+                            <constraint firstItem="V5y-8g-foG" firstAttribute="width" secondItem="wha-Qp-mwD" secondAttribute="width" multiplier="0.340625" id="E7c-SR-Vrv"/>
+                            <constraint firstItem="Vsg-a1-B0a" firstAttribute="trailing" secondItem="Gye-AY-Pmb" secondAttribute="trailing" constant="16" id="Ea2-QE-oid"/>
+                            <constraint firstItem="Zms-yu-Pee" firstAttribute="width" secondItem="wha-Qp-mwD" secondAttribute="width" multiplier="0.25" id="GC2-dL-wMU"/>
+                            <constraint firstItem="Zms-yu-Pee" firstAttribute="height" secondItem="wha-Qp-mwD" secondAttribute="height" multiplier="0.0416667" id="PB4-6V-bxj"/>
+                            <constraint firstItem="Eab-gZ-OMq" firstAttribute="leading" secondItem="FBF-gJ-Je5" secondAttribute="leading" id="Q2b-g8-kFf"/>
+                            <constraint firstItem="FBF-gJ-Je5" firstAttribute="height" secondItem="wha-Qp-mwD" secondAttribute="height" multiplier="0.04375" id="S04-qF-FTM"/>
+                            <constraint firstItem="m8F-Ww-bK6" firstAttribute="width" secondItem="wha-Qp-mwD" secondAttribute="width" multiplier="0.25" id="SX7-Wr-fXj"/>
+                            <constraint firstItem="Kis-es-BUl" firstAttribute="centerY" secondItem="Vsg-a1-B0a" secondAttribute="centerY" constant="64" id="U2O-Ia-Gb0"/>
+                            <constraint firstItem="m8F-Ww-bK6" firstAttribute="top" secondItem="Zms-yu-Pee" secondAttribute="bottom" constant="14" id="Zul-2d-dDy"/>
+                            <constraint firstItem="FBF-gJ-Je5" firstAttribute="top" secondItem="V5y-8g-foG" secondAttribute="bottom" constant="25" id="abw-8o-bnv"/>
+                            <constraint firstItem="FBF-gJ-Je5" firstAttribute="leading" secondItem="Vsg-a1-B0a" secondAttribute="leading" constant="22" id="iIz-Mo-Pu4"/>
+                            <constraint firstItem="Eab-gZ-OMq" firstAttribute="width" secondItem="wha-Qp-mwD" secondAttribute="width" multiplier="0.5" id="kBD-We-rfI"/>
+                            <constraint firstItem="m8F-Ww-bK6" firstAttribute="centerY" secondItem="Eab-gZ-OMq" secondAttribute="centerY" id="kkj-BB-6m9"/>
+                            <constraint firstItem="Kis-es-BUl" firstAttribute="width" secondItem="wha-Qp-mwD" secondAttribute="width" id="klh-gP-5LB"/>
+                            <constraint firstItem="m8F-Ww-bK6" firstAttribute="centerX" secondItem="Zms-yu-Pee" secondAttribute="centerX" id="n48-U9-XmT"/>
+                            <constraint firstItem="V5y-8g-foG" firstAttribute="top" secondItem="Vsg-a1-B0a" secondAttribute="top" constant="20" id="qeq-Zw-yCR"/>
+                            <constraint firstItem="m8F-Ww-bK6" firstAttribute="height" secondItem="wha-Qp-mwD" secondAttribute="height" multiplier="0.04375" id="uQE-yd-CDh"/>
+                            <constraint firstItem="Gye-AY-Pmb" firstAttribute="height" secondItem="wha-Qp-mwD" secondAttribute="height" multiplier="0.0604167" id="wEH-Y5-Ka6"/>
+                            <constraint firstItem="Vsg-a1-B0a" firstAttribute="trailing" secondItem="Zms-yu-Pee" secondAttribute="trailing" constant="26" id="waq-d8-aEz"/>
+                            <constraint firstAttribute="bottom" secondItem="Kis-es-BUl" secondAttribute="bottom" id="yQm-vV-T78"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="changeVisualizationButton" destination="Gye-AY-Pmb" id="Eot-b3-n94"/>
+                        <outlet property="expenseTotalValueLabel" destination="Zms-yu-Pee" id="wcP-ak-wvz"/>
+                        <outlet property="pieChart" destination="Kis-es-BUl" id="Aau-WT-tqX"/>
+                        <outlet property="revenuesTotalValueLabel" destination="m8F-Ww-bK6" id="Rms-e7-AYw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EGX-Oe-R7l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112.8" y="64.285714285714292"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

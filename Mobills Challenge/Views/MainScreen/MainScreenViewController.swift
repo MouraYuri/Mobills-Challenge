@@ -51,6 +51,13 @@ class MainScreenViewController: UIViewController {
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
+    
+    @IBAction func didTapStatisticButton(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "StatisticsScreen", bundle: Bundle.main)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "StatisticsScreen")
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
 }
 
 extension MainScreenViewController: UITableViewDelegate, UITableViewDataSource {
@@ -81,7 +88,7 @@ extension MainScreenViewController: UITableViewDelegate, UITableViewDataSource {
         let transaction = self.transactionsArray[indexPath.row]
         let storyboard = UIStoryboard(name: "RegisterTransaction", bundle: Bundle.main)
         if let viewController = storyboard.instantiateViewController(withIdentifier: "RegisterTransaction") as? RegisterTransactionViewController {
-            viewController.updatingValues = true
+            viewController.setUpdatingValues(value: true)
             viewController.transactionToBeEdited = transaction
             self.navigationController?.pushViewController(viewController, animated: true)
         }
@@ -100,7 +107,7 @@ extension MainScreenViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension MainScreenViewController: MainScreenViewModelDelegate {
+extension MainScreenViewController: FetchTransactionsDelegate {
     func didFinishFetching(values: [Any]) {
         guard let transactions = values as? [Transaction] else {
             return
