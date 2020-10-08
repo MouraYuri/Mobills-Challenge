@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A877F76BF89AA7EA4CA3E77 /* Pods_Mobills_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE696E29A194B73F5E069118 /* Pods_Mobills_Challenge.framework */; };
+		62D95D8BA3AE05F44FE3E10A /* Pods_Mobills_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3A273D2A02AB402C819B39 /* Pods_Mobills_Challenge.framework */; };
 		A044BC38252DF30B00D85251 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A044BC37252DF30B00D85251 /* GoogleService-Info.plist */; };
 		A0537417252D311B00991CE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0537416252D311B00991CE1 /* AppDelegate.swift */; };
 		A0537419252D311B00991CE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0537418252D311B00991CE1 /* SceneDelegate.swift */; };
@@ -25,10 +25,12 @@
 		A059D2AC252E115C00F571C9 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A059D2AB252E115C00F571C9 /* Transaction.swift */; };
 		A059D2AF252E180800F571C9 /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A059D2AE252E180800F571C9 /* MainScreenViewModel.swift */; };
 		A059D2B2252E2AE400F571C9 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A059D2B1252E2AE400F571C9 /* DateExtensions.swift */; };
+		A0A7ABB0252EC713009F4143 /* StatisticsScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0A7ABAF252EC713009F4143 /* StatisticsScreen.storyboard */; };
+		A0A7ABB3252EC73F009F4143 /* StatisticsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A7ABB2252EC73F009F4143 /* StatisticsScreenViewController.swift */; };
+		A0A7ABBA252EC943009F4143 /* StatisticsScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A7ABB9252EC943009F4143 /* StatisticsScreenViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1D0E39DB9709B7BC935552E7 /* Pods-Mobills Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobills Challenge.debug.xcconfig"; path = "Target Support Files/Pods-Mobills Challenge/Pods-Mobills Challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		A044BC37252DF30B00D85251 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A0537413252D311B00991CE1 /* Mobills Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobills Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0537416252D311B00991CE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,8 +50,12 @@
 		A059D2AB252E115C00F571C9 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		A059D2AE252E180800F571C9 /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
 		A059D2B1252E2AE400F571C9 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
-		BE696E29A194B73F5E069118 /* Pods_Mobills_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mobills_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC19AE78A71EEA3E2E5AB94A /* Pods-Mobills Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobills Challenge.release.xcconfig"; path = "Target Support Files/Pods-Mobills Challenge/Pods-Mobills Challenge.release.xcconfig"; sourceTree = "<group>"; };
+		A0A7ABAF252EC713009F4143 /* StatisticsScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StatisticsScreen.storyboard; sourceTree = "<group>"; };
+		A0A7ABB2252EC73F009F4143 /* StatisticsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsScreenViewController.swift; sourceTree = "<group>"; };
+		A0A7ABB9252EC943009F4143 /* StatisticsScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsScreenViewModel.swift; sourceTree = "<group>"; };
+		C794E31B0A0622C5BFB77D6A /* Pods-Mobills Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobills Challenge.debug.xcconfig"; path = "Target Support Files/Pods-Mobills Challenge/Pods-Mobills Challenge.debug.xcconfig"; sourceTree = "<group>"; };
+		D5599CBF29FA104EB4B24A16 /* Pods-Mobills Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobills Challenge.release.xcconfig"; path = "Target Support Files/Pods-Mobills Challenge/Pods-Mobills Challenge.release.xcconfig"; sourceTree = "<group>"; };
+		FC3A273D2A02AB402C819B39 /* Pods_Mobills_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mobills_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A877F76BF89AA7EA4CA3E77 /* Pods_Mobills_Challenge.framework in Frameworks */,
+				62D95D8BA3AE05F44FE3E10A /* Pods_Mobills_Challenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,10 +73,18 @@
 		430B85ADD506C25C27CBC8CF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1D0E39DB9709B7BC935552E7 /* Pods-Mobills Challenge.debug.xcconfig */,
-				EC19AE78A71EEA3E2E5AB94A /* Pods-Mobills Challenge.release.xcconfig */,
+				C794E31B0A0622C5BFB77D6A /* Pods-Mobills Challenge.debug.xcconfig */,
+				D5599CBF29FA104EB4B24A16 /* Pods-Mobills Challenge.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		90601827FACC89FE186D7DF3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC3A273D2A02AB402C819B39 /* Pods_Mobills_Challenge.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		A053740A252D311A00991CE1 = {
@@ -79,7 +93,7 @@
 				A0537415252D311B00991CE1 /* Mobills Challenge */,
 				A0537414252D311B00991CE1 /* Products */,
 				430B85ADD506C25C27CBC8CF /* Pods */,
-				D636785A593153DB114DAE17 /* Frameworks */,
+				90601827FACC89FE186D7DF3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +124,7 @@
 		A053742D252D318300991CE1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A0A7ABAE252EC6EF009F4143 /* StatisticsScreen */,
 				A0537421252D312000991CE1 /* LaunchScreen.storyboard */,
 				A0537440252D71AD00991CE1 /* RegisterTransactions */,
 				A053742E252D318E00991CE1 /* MainScreen */,
@@ -175,6 +190,7 @@
 			children = (
 				A059D2A3252E05DE00F571C9 /* RegisterTransactionViewModel.swift */,
 				A059D2AE252E180800F571C9 /* MainScreenViewModel.swift */,
+				A0A7ABB9252EC943009F4143 /* StatisticsScreenViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -188,12 +204,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		D636785A593153DB114DAE17 /* Frameworks */ = {
+		A0A7ABAE252EC6EF009F4143 /* StatisticsScreen */ = {
 			isa = PBXGroup;
 			children = (
-				BE696E29A194B73F5E069118 /* Pods_Mobills_Challenge.framework */,
+				A0A7ABAF252EC713009F4143 /* StatisticsScreen.storyboard */,
+				A0A7ABB2252EC73F009F4143 /* StatisticsScreenViewController.swift */,
 			);
-			name = Frameworks;
+			path = StatisticsScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,11 +220,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A0537427252D312000991CE1 /* Build configuration list for PBXNativeTarget "Mobills Challenge" */;
 			buildPhases = (
-				8AFCAA0183EBF7354F61D6BD /* [CP] Check Pods Manifest.lock */,
+				5DD42FC4793B727490CA3843 /* [CP] Check Pods Manifest.lock */,
 				A053740F252D311A00991CE1 /* Sources */,
 				A0537410252D311A00991CE1 /* Frameworks */,
 				A0537411252D311A00991CE1 /* Resources */,
-				7BAAB0CC867105DB117038FE /* [CP] Embed Pods Frameworks */,
+				9FCBA340E8120780B0D0060F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -263,30 +280,14 @@
 				A044BC38252DF30B00D85251 /* GoogleService-Info.plist in Resources */,
 				A0537420252D311F00991CE1 /* Assets.xcassets in Resources */,
 				A0537430252D31AB00991CE1 /* MainScreen.storyboard in Resources */,
+				A0A7ABB0252EC713009F4143 /* StatisticsScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7BAAB0CC867105DB117038FE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Mobills Challenge/Pods-Mobills Challenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Mobills Challenge/Pods-Mobills Challenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mobills Challenge/Pods-Mobills Challenge-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8AFCAA0183EBF7354F61D6BD /* [CP] Check Pods Manifest.lock */ = {
+		5DD42FC4793B727490CA3843 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -308,6 +309,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9FCBA340E8120780B0D0060F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mobills Challenge/Pods-Mobills Challenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mobills Challenge/Pods-Mobills Challenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mobills Challenge/Pods-Mobills Challenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -321,10 +339,12 @@
 				A0537417252D311B00991CE1 /* AppDelegate.swift in Sources */,
 				A0537419252D311B00991CE1 /* SceneDelegate.swift in Sources */,
 				A059D2B2252E2AE400F571C9 /* DateExtensions.swift in Sources */,
+				A0A7ABB3252EC73F009F4143 /* StatisticsScreenViewController.swift in Sources */,
 				A059D2AC252E115C00F571C9 /* Transaction.swift in Sources */,
 				A059D2A4252E05DE00F571C9 /* RegisterTransactionViewModel.swift in Sources */,
 				A059D2A9252E0B1F00F571C9 /* User.swift in Sources */,
 				A053743B252D404E00991CE1 /* TransactionsTableViewCell.swift in Sources */,
+				A0A7ABBA252EC943009F4143 /* StatisticsScreenViewModel.swift in Sources */,
 				A059D29E252E043300F571C9 /* FirestoreServices.swift in Sources */,
 				A0537433252D31D200991CE1 /* MainScreenViewController.swift in Sources */,
 			);
@@ -462,7 +482,7 @@
 		};
 		A0537428252D312000991CE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D0E39DB9709B7BC935552E7 /* Pods-Mobills Challenge.debug.xcconfig */;
+			baseConfigurationReference = C794E31B0A0622C5BFB77D6A /* Pods-Mobills Challenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -481,7 +501,7 @@
 		};
 		A0537429252D312000991CE1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EC19AE78A71EEA3E2E5AB94A /* Pods-Mobills Challenge.release.xcconfig */;
+			baseConfigurationReference = D5599CBF29FA104EB4B24A16 /* Pods-Mobills Challenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

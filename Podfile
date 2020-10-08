@@ -11,6 +11,6 @@ target 'Mobills Challenge' do
 	pod 'Firebase/Crashlytics'
 	pod 'Firebase/Database'
 	pod 'Firebase/Firestore'
-
+	pod 'Charts'
 
 end
