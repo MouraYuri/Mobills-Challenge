@@ -15,6 +15,7 @@ Simple CRUD app where user can:
 
 ### About the project
 * Build in Xcode 12
+* iOS Deployment Target: iOS 14
 * MVVM Architecture used
 * Swift
 * Storyboard
