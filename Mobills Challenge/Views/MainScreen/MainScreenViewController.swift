@@ -54,12 +54,13 @@ class MainScreenViewController: UIViewController {
 }
 
 extension MainScreenViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.transactionsArray.count
-    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.transactionsArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -83,6 +84,18 @@ extension MainScreenViewController: UITableViewDelegate, UITableViewDataSource {
             viewController.updatingValues = true
             viewController.transactionToBeEdited = transaction
             self.navigationController?.pushViewController(viewController, animated: true)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        let transaction = self.transactionsArray[indexPath.row]
+        switch editingStyle {
+            case .delete:
+                self.transactionsArray.remove(at: indexPath.row)
+                self.tableView.reloadData()
+                self.viewModel.deleteTransaction(transaction.documentID)
+            default:
+                return
         }
     }
 }

@@ -30,4 +30,12 @@ class MainScreenViewModel {
             }
         }
     }
+    
+    func deleteTransaction(_ transactionID: String){
+        FirestoreServices.shared.deleteTransaction(transactionID: transactionID) { (error) in
+            if let _ = error {
+                self.mainScreenViewModelDelegate?.didFinishFetchingWithError(message: error ?? "Ocorreu um erro")
+            }
+        }
+    }
 }
