@@ -165,7 +165,7 @@ class StatisticsScreenViewController: UIViewController {
         if self.currentVisualizationType == .simple {
             colors = [UIColor(red: 94/255, green: 6/255, blue: 31/255, alpha: 1.0), UIColor.blue]
         } else {
-            colors = [UIColor.purple, UIColor.brown, UIColor.blue, UIColor.cyan]
+            colors = [UIColor.purple, UIColor.brown, UIColor.blue, UIColor.darkGray]
         }
         chartDataSet.colors = colors
         self.pieChart.data = chartData
