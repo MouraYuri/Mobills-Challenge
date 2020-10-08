@@ -26,10 +26,14 @@ extension UITextField {
         self.text = nil
     }
     
-    func addInputViewAsDatePicker(datePickerMode: UIDatePicker.Mode){
+    func addDatePickerAsInputView(datePickerMode: UIDatePicker.Mode, selector: Selector, target: UIViewController){
         let screenWidth = UIScreen.main.bounds.width
         let datePicker = UIDatePicker(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 400))
+        datePicker.addTarget(target, action: selector, for: .allEvents)
         datePicker.datePickerMode = .date
+        if #available(iOS 13.4, *) {
+            datePicker.preferredDatePickerStyle = .wheels
+        }
         self.inputView = datePicker
     }
 }

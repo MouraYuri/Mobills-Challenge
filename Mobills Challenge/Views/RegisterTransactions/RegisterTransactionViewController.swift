@@ -57,8 +57,15 @@ class RegisterTransactionViewController: UIViewController {
     }
     
     func setupDatePicker(){
-        self.dateTextField.addInputViewAsDatePicker(datePickerMode: .date)
+        self.dateTextField.addDatePickerAsInputView(datePickerMode: .date, selector: #selector(datePickerValueChanged), target: self)
         self.dateTextField.addToolbarToTextField(doneAction: #selector(didTapDone), cancelAction: #selector(didTapCancel), barButtonTag: 1)
+    }
+    
+    @objc func datePickerValueChanged(sender: UIDatePicker){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        self.dateTextField.text = dateFormatter.string(from: sender.date)
+        setupDateValue(sender.date)
     }
     
     
@@ -168,6 +175,20 @@ class RegisterTransactionViewController: UIViewController {
         return currentTextFieldValue != "" ? "R$ \(currentTextFieldValue)" : ""
     }
     
+    func getDateTextFieldTextAsDate() -> Date{
+        if let dateTextFieldText = self.dateTextField.text {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "dd/MM/yyyy"
+            let newDateValue = formatter.date(from: dateTextFieldText) ?? Date()
+            return newDateValue
+        }
+        return Date()
+    }
+    
+    func setupDateValue(_ newValue: Date){
+        self.transactionDict["data"] = newValue
+    }
+    
     func setupTransactionValue(_ newValue: String?){
         let newValueSplitted = newValue?.split(separator: " ")
         var value: Double = 0.0
@@ -200,6 +221,8 @@ class RegisterTransactionViewController: UIViewController {
                 
                 setupDescriptionValue(descriptionTextField.text)
                 setupTransactionValue(valueTextField.text)
+                
+                setupDateValue(getDateTextFieldTextAsDate())
                 
                 self.viewModel.updateExistingTransaction(self.transactionDict, transactionID: documentID)
             }
