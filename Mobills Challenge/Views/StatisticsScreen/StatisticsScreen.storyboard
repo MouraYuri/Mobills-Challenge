@@ -23,7 +23,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kis-es-BUl" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="20" y="165" width="284" height="150"/>
+                                <rect key="frame" x="0.0" y="160" width="320" height="288"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
@@ -31,12 +31,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="V5y-8g-foG" firstAttribute="height" secondItem="wha-Qp-mwD" secondAttribute="height" multiplier="0.05625" id="75z-JZ-jkx"/>
+                            <constraint firstItem="Kis-es-BUl" firstAttribute="centerX" secondItem="Vsg-a1-B0a" secondAttribute="centerX" id="9A2-hy-Xtb"/>
                             <constraint firstItem="V5y-8g-foG" firstAttribute="leading" secondItem="Vsg-a1-B0a" secondAttribute="leading" constant="20" id="Cyz-jc-1c5"/>
                             <constraint firstItem="V5y-8g-foG" firstAttribute="width" secondItem="wha-Qp-mwD" secondAttribute="width" multiplier="0.340625" id="E7c-SR-Vrv"/>
-                            <constraint firstItem="Kis-es-BUl" firstAttribute="height" secondItem="wha-Qp-mwD" secondAttribute="height" multiplier="0.3125" id="LLA-rD-Mjt"/>
-                            <constraint firstItem="Kis-es-BUl" firstAttribute="centerY" secondItem="Vsg-a1-B0a" secondAttribute="centerY" id="U2O-Ia-Gb0"/>
-                            <constraint firstItem="Kis-es-BUl" firstAttribute="width" secondItem="wha-Qp-mwD" secondAttribute="width" multiplier="0.8875" id="klh-gP-5LB"/>
-                            <constraint firstItem="Kis-es-BUl" firstAttribute="leading" secondItem="V5y-8g-foG" secondAttribute="leading" id="q0K-eL-gUz"/>
+                            <constraint firstItem="Kis-es-BUl" firstAttribute="height" secondItem="wha-Qp-mwD" secondAttribute="height" multiplier="0.6" id="LLA-rD-Mjt"/>
+                            <constraint firstItem="Kis-es-BUl" firstAttribute="centerY" secondItem="Vsg-a1-B0a" secondAttribute="centerY" constant="64" id="U2O-Ia-Gb0"/>
+                            <constraint firstItem="Kis-es-BUl" firstAttribute="width" secondItem="wha-Qp-mwD" secondAttribute="width" id="klh-gP-5LB"/>
                             <constraint firstItem="V5y-8g-foG" firstAttribute="top" secondItem="Vsg-a1-B0a" secondAttribute="top" constant="20" id="qeq-Zw-yCR"/>
                         </constraints>
                     </view>

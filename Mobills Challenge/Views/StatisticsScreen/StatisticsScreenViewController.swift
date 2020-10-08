@@ -76,8 +76,9 @@ class StatisticsScreenViewController: UIViewController {
     func updateChartData(){
         let chartDataSet = PieChartDataSet(entries: self.dataEntries, label: nil)
         let chartData = PieChartData(dataSet: chartDataSet)
-        
-        let colors = [UIColor.red, UIColor.green]
+        pieChart.entryLabelColor = UIColor.black as NSUIColor
+        pieChart.entryLabelFont = NSUIFont.boldSystemFont(ofSize: 16)
+        let colors = [UIColor(red: 94/255, green: 6/255, blue: 31/255, alpha: 1.0), UIColor.blue]
         chartDataSet.colors = colors
         self.pieChart.data = chartData
     }
