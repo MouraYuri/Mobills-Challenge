@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,47 +13,56 @@
             <objects>
                 <viewController storyboardIdentifier="StatisticsScreen" id="7MQ-0o-vNU" customClass="StatisticsScreenViewController" customModule="Mobills_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wha-Qp-mwD">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kis-es-BUl" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="160" width="320" height="288"/>
+                                <rect key="frame" x="0.0" y="231.33333333333334" width="375" height="487.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estatísticas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5y-8g-foG">
-                                <rect key="frame" x="20" y="20" width="109" height="27"/>
+                                <rect key="frame" x="20.000000000000007" y="64" width="127.66666666666669" height="45.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Despesas totais:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBF-gJ-Je5">
-                                <rect key="frame" x="22" y="72" width="160" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receitas totais:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eab-gZ-OMq">
-                                <rect key="frame" x="22" y="106.5" width="160" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8F-Ww-bK6">
-                                <rect key="frame" x="214" y="106.5" width="80" height="21"/>
+                                <rect key="frame" x="22" y="134.66666666666666" width="187.66666666666666" height="35.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zms-yu-Pee">
-                                <rect key="frame" x="214" y="72.5" width="80" height="20"/>
+                                <rect key="frame" x="255.33333333333334" y="135.66666666666666" width="93.666666666666657" height="33.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receitas totais:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eab-gZ-OMq">
+                                <rect key="frame" x="22" y="183.66666666666666" width="187.66666666666666" height="35.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8F-Ww-bK6">
+                                <rect key="frame" x="255.33333333333334" y="183.33333333333334" width="93.666666666666657" height="36.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Gye-AY-Pmb">
+                                <rect key="frame" x="209" y="62.333333333333343" width="150" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Mudar Visualização"/>
+                                <connections>
+                                    <action selector="didTapChangeVisualizationButton:" destination="7MQ-0o-vNU" eventType="touchUpInside" id="61s-S7-hVT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vsg-a1-B0a"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Gye-AY-Pmb" firstAttribute="centerY" secondItem="V5y-8g-foG" secondAttribute="centerY" id="0V5-cL-XDg"/>
                             <constraint firstItem="Eab-gZ-OMq" firstAttribute="height" secondItem="wha-Qp-mwD" secondAttribute="height" multiplier="0.04375" id="0wG-64-ot4"/>
                             <constraint firstItem="FBF-gJ-Je5" firstAttribute="leading" secondItem="V5y-8g-foG" secondAttribute="leading" id="3yQ-sJ-n3v"/>
                             <constraint firstItem="V5y-8g-foG" firstAttribute="height" secondItem="wha-Qp-mwD" secondAttribute="height" multiplier="0.05625" id="75z-JZ-jkx"/>
@@ -62,7 +71,9 @@
                             <constraint firstItem="Eab-gZ-OMq" firstAttribute="top" secondItem="FBF-gJ-Je5" secondAttribute="bottom" constant="13.5" id="9zb-US-Dpb"/>
                             <constraint firstItem="V5y-8g-foG" firstAttribute="leading" secondItem="Vsg-a1-B0a" secondAttribute="leading" constant="20" id="Cyz-jc-1c5"/>
                             <constraint firstItem="FBF-gJ-Je5" firstAttribute="width" secondItem="wha-Qp-mwD" secondAttribute="width" multiplier="0.5" id="DWi-HT-l5M"/>
+                            <constraint firstItem="Gye-AY-Pmb" firstAttribute="width" secondItem="wha-Qp-mwD" secondAttribute="width" multiplier="0.4" id="DZR-zO-Sft"/>
                             <constraint firstItem="V5y-8g-foG" firstAttribute="width" secondItem="wha-Qp-mwD" secondAttribute="width" multiplier="0.340625" id="E7c-SR-Vrv"/>
+                            <constraint firstItem="Vsg-a1-B0a" firstAttribute="trailing" secondItem="Gye-AY-Pmb" secondAttribute="trailing" constant="16" id="Ea2-QE-oid"/>
                             <constraint firstItem="Zms-yu-Pee" firstAttribute="width" secondItem="wha-Qp-mwD" secondAttribute="width" multiplier="0.25" id="GC2-dL-wMU"/>
                             <constraint firstItem="Kis-es-BUl" firstAttribute="height" secondItem="wha-Qp-mwD" secondAttribute="height" multiplier="0.6" id="LLA-rD-Mjt"/>
                             <constraint firstItem="Zms-yu-Pee" firstAttribute="height" secondItem="wha-Qp-mwD" secondAttribute="height" multiplier="0.0416667" id="PB4-6V-bxj"/>
@@ -79,10 +90,12 @@
                             <constraint firstItem="m8F-Ww-bK6" firstAttribute="centerX" secondItem="Zms-yu-Pee" secondAttribute="centerX" id="n48-U9-XmT"/>
                             <constraint firstItem="V5y-8g-foG" firstAttribute="top" secondItem="Vsg-a1-B0a" secondAttribute="top" constant="20" id="qeq-Zw-yCR"/>
                             <constraint firstItem="m8F-Ww-bK6" firstAttribute="height" secondItem="wha-Qp-mwD" secondAttribute="height" multiplier="0.04375" id="uQE-yd-CDh"/>
+                            <constraint firstItem="Gye-AY-Pmb" firstAttribute="height" secondItem="wha-Qp-mwD" secondAttribute="height" multiplier="0.0604167" id="wEH-Y5-Ka6"/>
                             <constraint firstItem="Vsg-a1-B0a" firstAttribute="trailing" secondItem="Zms-yu-Pee" secondAttribute="trailing" constant="26" id="waq-d8-aEz"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="changeVisualizationButton" destination="Gye-AY-Pmb" id="Eot-b3-n94"/>
                         <outlet property="expenseTotalValueLabel" destination="Zms-yu-Pee" id="wcP-ak-wvz"/>
                         <outlet property="pieChart" destination="Kis-es-BUl" id="Aau-WT-tqX"/>
                         <outlet property="revenuesTotalValueLabel" destination="m8F-Ww-bK6" id="Rms-e7-AYw"/>
