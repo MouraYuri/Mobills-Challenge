@@ -85,6 +85,7 @@ class RegisterTransactionViewController: UIViewController {
         
         updatelabelBelowSegmentedControlText()
         self.excludeButton.isHidden = false
+        self.finalizeButton.setTitle("Salvar", for: .normal)
     }
     
     

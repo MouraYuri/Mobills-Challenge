@@ -96,10 +96,7 @@ extension MainScreenViewController: MainScreenViewModelDelegate {
     }
     
     func didFinishFetchingWithError(message: String) {
-        showAlertWithErrorMessage(message)
+        
     }
     
-    
-    func showAlertWithErrorMessage(_ message: String){
-    }
 }
