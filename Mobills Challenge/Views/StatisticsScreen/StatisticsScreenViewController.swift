@@ -28,6 +28,11 @@ class StatisticsScreenViewController: UIViewController {
     
     @IBOutlet weak var pieChart: PieChartView!
     
+    @IBOutlet weak var expenseTotalValueLabel: UILabel!
+    
+    @IBOutlet weak var revenuesTotalValueLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.statisticsScreenViewModelDelegate = self
@@ -39,9 +44,12 @@ class StatisticsScreenViewController: UIViewController {
     }
     
     private func getRevenueAndExpenseTotalValues() {
-        self.expensesTransactionsTotalValue = getExpensesTransactionsTotalValue(of: self.transactions)
-        self.revenuesTransactionsTotalValue = getRevenueTransactionsTotalValue(of: self.transactions)
-        setupPieChat()
+        let expensesTotalValue = getExpensesTransactionsTotalValue(of: self.transactions)
+        let revenuesTotaValue = getRevenueTransactionsTotalValue(of: self.transactions)
+        self.expensesTransactionsTotalValue = expensesTotalValue
+        self.revenuesTransactionsTotalValue = revenuesTotaValue
+        setupPieChart()
+        setupTotalValueLabels(totalExpensesValue: expensesTotalValue, totalRevenueValues: revenuesTotaValue)
     }
 
     private func getExpensesTransactionsTotalValue(of transactions: [Transaction]) -> Double {
@@ -60,7 +68,7 @@ class StatisticsScreenViewController: UIViewController {
         return ret
     }
     
-    func setupPieChat(){
+    func setupPieChart(){
         self.pieChart.chartDescription?.text = "Transações"
         self.expensesDataEntry.label = "Despesas"
         self.expensesDataEntry.value = self.expensesTransactionsTotalValue
@@ -81,6 +89,13 @@ class StatisticsScreenViewController: UIViewController {
         let colors = [UIColor(red: 94/255, green: 6/255, blue: 31/255, alpha: 1.0), UIColor.blue]
         chartDataSet.colors = colors
         self.pieChart.data = chartData
+    }
+    
+    func setupTotalValueLabels(totalExpensesValue: Double, totalRevenueValues: Double) {
+        self.expenseTotalValueLabel.text = "R$ \(totalExpensesValue)"
+        self.expenseTotalValueLabel.textColor = .red
+        self.revenuesTotalValueLabel.text = "R$ \(totalRevenueValues)"
+        self.revenuesTotalValueLabel.textColor = .blue
     }
 }
 

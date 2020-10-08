@@ -81,7 +81,7 @@ class TransactionsTableViewCell: UITableViewCell {
             self.valueLabel.textColor = .red
         } else {
             self.transactionImage.image = UIImage(named: "DownArrow")
-            self.valueLabel.textColor = .systemGreen
+            self.valueLabel.textColor = .blue
         }
     }
     
