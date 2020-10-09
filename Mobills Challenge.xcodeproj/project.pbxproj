@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		62D95D8BA3AE05F44FE3E10A /* Pods_Mobills_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3A273D2A02AB402C819B39 /* Pods_Mobills_Challenge.framework */; };
-		A044BC38252DF30B00D85251 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A044BC37252DF30B00D85251 /* GoogleService-Info.plist */; };
+		A0229B52252FE297001C7287 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0229B51252FE297001C7287 /* GoogleService-Info.plist */; };
 		A0537417252D311B00991CE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0537416252D311B00991CE1 /* AppDelegate.swift */; };
 		A0537419252D311B00991CE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0537418252D311B00991CE1 /* SceneDelegate.swift */; };
 		A0537420252D311F00991CE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A053741F252D311F00991CE1 /* Assets.xcassets */; };
@@ -31,7 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A044BC37252DF30B00D85251 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A0229B51252FE297001C7287 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A0537413252D311B00991CE1 /* Mobills Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobills Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0537416252D311B00991CE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0537418252D311B00991CE1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 				A0537418252D311B00991CE1 /* SceneDelegate.swift */,
 				A053741F252D311F00991CE1 /* Assets.xcassets */,
 				A0537424252D312000991CE1 /* Info.plist */,
-				A044BC37252DF30B00D85251 /* GoogleService-Info.plist */,
+				A0229B51252FE297001C7287 /* GoogleService-Info.plist */,
 			);
 			path = "Mobills Challenge";
 			sourceTree = "<group>";
@@ -277,10 +277,10 @@
 			files = (
 				A0537442252D71D200991CE1 /* RegisterTransaction.storyboard in Resources */,
 				A0537423252D312000991CE1 /* LaunchScreen.storyboard in Resources */,
-				A044BC38252DF30B00D85251 /* GoogleService-Info.plist in Resources */,
 				A0537420252D311F00991CE1 /* Assets.xcassets in Resources */,
 				A0537430252D31AB00991CE1 /* MainScreen.storyboard in Resources */,
 				A0A7ABB0252EC713009F4143 /* StatisticsScreen.storyboard in Resources */,
+				A0229B52252FE297001C7287 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
